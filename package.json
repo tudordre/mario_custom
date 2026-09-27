@@ -1,0 +1,16 @@
+{
+  "name": "mario-custom",
+  "version": "1.0.0",
+  "description": "Mario-style platformer with random bricks, pipes and pits",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "ELECTRON_RUN_AS_NODE= electron .",
+    "dev": "ELECTRON_RUN_AS_NODE= electron ."
+  },
+  "keywords": ["mario", "electron", "platformer", "game"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}

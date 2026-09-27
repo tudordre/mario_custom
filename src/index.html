@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+  <title>Mario Custom</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="hud-item"><span>BANI</span><strong id="money">0</strong></div>
+    <div class="hud-item"><span>PORTOCALII</span><strong id="oranges">0/3</strong></div>
+    <div class="hud-item"><span>TIMP</span><strong id="timer">1:00</strong></div>
+    <div class="hud-item"><span>DISTANȚĂ</span><strong id="distance">0m</strong></div>
+  </div>
+
+  <canvas id="game" width="960" height="540"></canvas>
+
+  <div id="overlay" class="visible">
+    <div class="panel">
+      <h1>MARIO CUSTOM</h1>
+      <p>Aripile apar după 5–20s — prinde-le ca să zbori (ține ↑/Space). Pasărea = sărituri mari. 3 portocalii = rachete.</p>
+      <ul>
+        <li><kbd>←</kbd><kbd>→</kbd> sau <kbd>A</kbd><kbd>D</kbd> — mișcare</li>
+        <li><kbd>↑</kbd> / <kbd>W</kbd> / <kbd>Space</kbd> — săritură (cu aripi: fiecare apăsare = un bătaie)</li>
+        <li><kbd>Ctrl</kbd> — bile / rachete (după 3 portocalii)</li>
+        <li><kbd>R</kbd> — restart</li>
+      </ul>
+      <button id="startBtn">START</button>
+    </div>
+  </div>
+
+  <div id="gameOver" class="hidden">
+    <div class="panel">
+      <h1>GAME OVER</h1>
+      <p id="finalMsg">Ai căzut în groapă!</p>
+      <p class="big">Bani: <strong id="finalMoney">0</strong></p>
+      <button id="restartBtn">DIN NOU</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

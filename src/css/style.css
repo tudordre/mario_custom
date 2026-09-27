@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1a1a2e;
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  user-select: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hud {
+  display: flex;
+  gap: 2.5rem;
+  padding: 0.6rem 1rem;
+  width: min(960px, 100%);
+  background: #0d0d1a;
+  border: 3px solid #fff;
+  border-bottom: none;
+  image-rendering: pixelated;
+}
+
+.hud-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hud-item span {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  opacity: 0.75;
+}
+
+.hud-item strong {
+  font-size: 1.25rem;
+  color: #ffe066;
+}
+
+#money {
+  color: #7CFC00;
+}
+
+#oranges {
+  color: #ff8c1a;
+}
+
+#oranges.ready {
+  color: #ff3300;
+}
+
+#timer {
+  color: #fff;
+}
+
+#timer.urgent {
+  color: #ff4444;
+}
+
+#game {
+  display: block;
+  width: min(960px, 100%);
+  height: auto;
+  border: 3px solid #fff;
+  image-rendering: pixelated;
+  background: #5c94fc;
+}
+
+#overlay,
+#gameOver {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 30, 0.72);
+  z-index: 10;
+}
+
+#overlay.hidden,
+#gameOver.hidden {
+  display: none;
+}
+
+.panel {
+  background: #2b2b4a;
+  border: 4px solid #fff;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.panel h1 {
+  font-size: 2rem;
+  color: #e52521;
+  text-shadow: 3px 3px 0 #000;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.panel p {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.panel ul {
+  list-style: none;
+  text-align: left;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.panel li {
+  margin: 0.4rem 0;
+}
+
+.panel .big {
+  font-size: 1.3rem;
+  color: #ffe066;
+}
+
+kbd {
+  display: inline-block;
+  background: #111;
+  border: 2px solid #888;
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  margin: 0 0.1rem;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  background: #e52521;
+  color: #fff;
+  border: 3px solid #fff;
+  padding: 0.65rem 1.8rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+}
+
+button:hover {
+  background: #ff3b37;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
